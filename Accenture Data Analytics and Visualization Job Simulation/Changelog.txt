@@ -1,0 +1,38 @@
+Clean the data:
+---------------
+Removing rows that have values which are missing,
+Changing the data type of some values within a column, and
+Removing columns which are not relevant to this task.
+Think about how each column might be relevant to the business question you’re investigating. If you can’t think of why a column may be useful, it may not be worth including it.
+
+Cleaning Dataset: Content.csv
+-------------------------
+1. Deleted column URL
+2. Deleted column User ID
+3. Removed " from column Category
+4. Rename column Type to Content_Type
+
+Total no. of rows: 1001
+
+Cleaning Dataset: Reaction.csv
+-------------------------
+1. Deleted column User ID
+2. Deleted blank value rows from column Type
+3. Rename column Type to Reaction_Type
+
+Total no. of rows: 24574
+
+Merging all in a Cleaned dataset
+--------------------------
+
+1. Using Reaction.csv as the base file & saving it as Reaction.xlsx
+
+2. Creating Content_Type & Category columns from Content.csv
+3. Creating Sentiment & Score columns from ReactionTypes.csv
+4. Pulling data from Content.csv & ReactionTypes.csv to Reaction.xlsx using VLOOKUP
+
+5. Copy Category column to new sheet
+6. Removing duplicates from Category column
+7. Use SUMIF to get total score for each categories
+8. Sort the Score column in descending order and copy the Top 5 rows
+9. Paste in new sheet and name it Top_5_Categories
